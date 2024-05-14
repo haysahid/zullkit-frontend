@@ -1,8 +1,8 @@
 <script setup>
 defineProps({
 	title: String,
-	subtitle: String,
 	image: String,
+	description: String,
 })
 </script>
 
@@ -22,7 +22,7 @@ defineProps({
 					</a>
 				</h1>
 				<span class="block text-sm font-light text-gray-500 no-underline">
-					{{ subtitle }}
+					{{ description }}
 				</span>
 			</header>
 		</div>

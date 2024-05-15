@@ -8,7 +8,7 @@ const categories = ref([]);
 async function getCategoriesData() {
   try {
     const response = await axios.get(
-      "http://localhost:8080/api/categories?show_product=1"
+      "http://localhost:8080/api/categories?limit=10000"
     );
     categories.value = response.data.data.data;
   } catch (error) {
@@ -30,7 +30,7 @@ onMounted(() => {
         :key="category.id"
         :id="category.id"
         :title="category.name"
-        :count="category.products.length"
+        :count="category.products_count"
         :image="category.thumbnails"
       />
     </div>
